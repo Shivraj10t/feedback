@@ -4,41 +4,259 @@
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
   
- <div class="row" >
- <div class="col-6"></div>
-     <div class="col-6" id="signup_sec">
-         <div class="mb-3 mt-3">
-             <label for="txt_first_name" class="form-label">FIRST NAME:</label>
-             <input type="text" minLength="2"   class="form-control" id="txt_first_name" placeholder="Enter First Name" name="email">
-        <div id="msg"></div>
-         </div>
-         <div class="mb-3 mt-3">
-             <label for="txt_last_name" class="form-label">LAST NAME:</label>
-             <input type="text" class="form-control" id="txt_last_name" placeholder="Enter Last Name" name="Last">
-             <div id="msg"></div>
-         </div>
-         <div class="mb-3 mt-3">
-             <label for="txt_email" class="form-label">Email:</label>
-             <input type="email" class="form-control" id="txt_email" placeholder="Enter email" name="email">
-             <div id="msg"></div>
-         </div>
-         <div class="mb-3 mt-3">
-             <label for="txt_contact_no" class="form-label">CONTACT NO:</label>
-             <input type="tel" class="form-control" id="txt_contact_no" placeholder="Enter Contact No" name="email">
-             <div id="msg"></div>
-         </div>
-         <div class=" row mb-3 mt-3">
-             <label for="txt_contact_no" class="form-label">GENDER</label>
-             <div class="col-12"><input type="radio" name="gender" id="rd_male" /> <label for="rd_male">Male</label> </div>
-             <div class="col-12"><input type="radio" name="gender" id="rd_female" /> <label for="rd_female">Female</label></div>
-             <div id="msg"></div>
-         </div>
-         @*<div class="form-check mb-3 visually-hidden">
-             <label class="form-check-label">
-                 <input class="form-check-input" type="checkbox" name="remember"> Remember me
-             </label>
-         </div>*@
-         <button type="submit" onclick="btnsubmit()" class="btn btn-primary">Submit</button>
-     </div>
+<div class="row">
+    <div class="col-6"></div>
+    <div class="col-6 d-none" id="signup_sec">
+        <div class="mb-3 mt-3">
+            <label for="txt_first_name" class="form-label">FIRST NAME:</label>
+            <input type="text" minLength="2" class="form-control" id="txt_first_name" placeholder="Enter First Name" name="email">
+            <div id="msg"></div>
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="txt_last_name" class="form-label">LAST NAME:</label>
+            <input type="text" class="form-control" id="txt_last_name" placeholder="Enter Last Name" name="Last">
+            <div id="msg"></div>
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="txt_email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="txt_email" placeholder="Enter email" name="email">
+            <div id="msg"></div>
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="txt_contact_no" class="form-label">CONTACT NO:</label>
+            <input type="tel" class="form-control" id="txt_contact_no" placeholder="Enter Contact No" name="email">
+            <div id="msg"></div>
+        </div>
+        <div class=" row mb-3 mt-3">
+            <label for="txt_contact_no" class="form-label">GENDER</label>
+            <div class="col-12"><input type="radio" name="gender" id="rd_male" /> <label for="rd_male">Male</label> </div>
+            <div class="col-12"><input type="radio" name="gender" id="rd_female" /> <label for="rd_female">Female</label></div>
+            <div id="msg"></div>
+        </div>
+        @*<div class="form-check mb-3 visually-hidden">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                </label>
+            </div>*@
+        <button type="submit" onclick="btnsubmit()" class="btn btn-primary">Submit</button>
+    </div>
+
+    <div class="col-6" id="signin_sec">
+
+        <div class="mb-3 mt-3">
+            <label for="txt_email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="sign_txt_email" placeholder="Enter email" name="email">
+            <div id="msg"></div>
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="txt_Password" class="form-label">Password :</label>
+            <input type="password" class="form-control" id="sign_txt_Password" placeholder="Enter Password" name="Password">
+            <div id="msg"></div>
+        </div>
+
+
+        <button type="submit" onclick="SignIn()" class="btn btn-primary">SignIn</button>
+
+    </div>
+    <div class="d-flex justify-content-end p-4">
+        <a class="form-check-label" data-current="signin" href="javascript:void(0)" onclick="links_d(this)">
+            Create New Account
+        </a>
+    </div>
+</div>
+ 
+
+
+<div class="row visually-hidden">
+    <div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div><div class="col-12 border p-4 border-1">
+        <label>title title title title </label>
+        <div class="row">
+            <div class="col-6">1 Q............</div>
+            <div class="col-6">2 Q............</div>
+            <div class="col-6">3 Q............</div>
+            <div class="col-6">4 Q............</div>
+        </div>
+
+    </div>
 </div>
 <script src="~/Scripts/newUser/newUser.js"></script>
