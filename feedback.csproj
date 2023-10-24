@@ -114,6 +114,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\feedback\get_feedback_data.js" />
     <Content Include="Scripts\newUser\newUser.js" />
     <Content Include="Scripts\Utities\utilities.js" />
     <Content Include="Web.config" />
@@ -122,6 +123,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\Admin\DashbordController.cs" />
     <Compile Include="Controllers\newUserController.cs" />
+    <Compile Include="Controllers\UsersFeedbackController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -166,6 +168,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\UsersFeedback\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

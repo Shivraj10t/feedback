@@ -1,4 +1,5 @@
-﻿const FirstName = document.getElementById("txt_first_name");
+﻿/*import { fetchData } from '../Utities/utilities.js';*/
+const FirstName = document.getElementById("txt_first_name");
 const LastName = document.getElementById("txt_last_name");
 const ContactNo = document.getElementById("txt_contact_no");
 const Email = document.getElementById("txt_email");

@@ -12,3 +12,5 @@ async function fetchData(url, params) {
         .then((data) => data.json())
         .then((data) => JSON.parse(data))
 }
+
+ 
